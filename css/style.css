@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  --font-family: "Montserrat", sans-serif;
+  --bs-dark: #212529;
+  --bs-secondary: #6c757d;
+  --bs-light: #f8f9fa;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  scroll-behavior: smooth;
+}
+
+.bg-dark {
+  background-color: var(--bs-dark);
+  color: var(--bs-light);
+}
+.bg-dark a {
+  color: var(--bs-light);
+}
+.bg-dark .navbar-toggle {
+  color: var(--bs-light);
+}
+
+.bg-light {
+  background-color: var(--bs-light);
+  color: var(--bs-dark);
+}
+.bg-light a {
+  color: var(--bs-dark);
+}
+.bg-light a:hover {
+  color: var(--bs-light);
+}
+.bg-light .navbar-toggle {
+  color: var(--bs-dark);
+}
+
+.header {
+  width: 100%;
+  min-height: 768px;
+}
+.header .navbar {
+  position: fixed;
+  width: 100%;
+  transition: 0.3s ease;
+}
+.header .navbar .container-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-inline: auto;
+}
+.header .navbar .container-navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 600;
+  text-decoration: none;
+  order: 1;
+}
+.header .navbar .container-navbar .navbar-logo:hover {
+  color: var(--bs-secondary);
+}
+.header .navbar .container-navbar .navbar-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  order: 2;
+}
+.header .navbar .container-navbar .container-menu {
+  order: 3;
+}
+.header .navbar .container-navbar .container-menu .navbar-menu {
+  display: flex;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+}
+.header .navbar .container-navbar .container-menu .navbar-menu li {
+  list-style: none;
+}
+.header .navbar .container-navbar .container-menu .navbar-menu li a {
+  display: block;
+  padding: 10px 15px 10px 15px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+.header .navbar .container-navbar .container-menu .navbar-menu li a:hover {
+  background-color: var(--bs-secondary);
+  border-radius: 5px;
+  text-decoration: none;
+}
+.header .navbar-scroll {
+  box-shadow: 1px 3px 5px var(--bs-dark);
+}
+.header .hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 178px 0px 0px 0px;
+  overflow-x: hidden;
+}
+.header .hero .container-img {
+  width: 100%;
+  padding: 0px 3rem 0px 3rem;
+  text-align: center;
+}
+.header .hero .container-img .img-hero {
+  width: 100%;
+}
+.header .hero .container-content {
+  width: 100%;
+  padding: 0px 3rem 0px 3rem;
+  text-align: center;
+  overflow-x: hidden;
+}
+.header .hero .container-content .heading-hero {
+  margin-bottom: 1rem;
+  font-size: 4rem;
+}
+.header .hero .container-content .heading-hero span {
+  color: var(--bs-secondary);
+}
+.header .hero .container-content .p-hero {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+.header .hero .container-content .btn-hero {
+  display: inline-block;
+  margin-right: 1rem;
+  padding: 10px 14px;
+  font-size: 2rem;
+  border: none;
+}
+.header .hero .container-content .btn-hero.bg-dark {
+  display: inline-block;
+  background-color: var(--bs-dark);
+  color: var(--bs-light);
+  border-radius: 8px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.header .hero .container-content .btn-hero.bg-dark:hover {
+  background-color: var(--bs-secondary);
+}
+.header .hero .container-content .btn-hero.bg-light {
+  display: inline-block;
+  background-color: var(--bs-light);
+  color: var(--bs-dark);
+  border-radius: 8px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.header .hero .container-content .btn-hero.bg-light:hover {
+  background-color: var(--bs-secondary);
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 250px;
+  padding: 30px 5rem 30px 5rem;
+  text-align: center;
+}
+.about .heading-about {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+.about .heading-about span {
+  color: var(--bs-secondary);
+}
+.about .container-img-about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  border: 1px solid var(--bs-light);
+  border-radius: 75px;
+  margin-bottom: 2rem;
+}
+.about .container-img-about .img-about {
+  width: 100%;
+}
+
+@media screen and (max-width: 992px) {
+  .header .navbar .container-navbar .navbar-toggle {
+    display: block;
+    order: 3;
+  }
+  .header .navbar .container-navbar .container-menu .navbar-menu {
+    background: red;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 5px;
+    position: absolute;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    top: 59px;
+    right: 0;
+    border-top: 1px solid var(--bs-light);
+    transform: translateY(-259px);
+    transition: 0.3s ease;
+    opacity: 0;
+    order: 2;
+  }
+  .menu-active {
+    transform: translateY(259px);
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 932px) {
+  .hero {
+    flex-direction: column;
+  }
+  .hero .container-img {
+    padding: 10px 3rem 0px 3rem;
+  }
+  .hero .container-content {
+    padding: 10px 3rem 0px 3rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header .hero {
+    flex-direction: column;
+  }
+  .header .hero .container-img {
+    padding: 10px 3rem 0px 3rem;
+  }
+  .header .hero .container-content {
+    padding: 10px 3rem 0px 3rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .header .hero {
+    flex-direction: column;
+    padding: 59px 0px 0px 0px;
+  }
+  .header .hero .container-img {
+    padding: 10px 3rem 0px 3rem;
+  }
+  .header .hero .container-content {
+    padding: 10px 3rem 0px 3rem;
+  }
+}/*# sourceMappingURL=style.css.map */
