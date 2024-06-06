@@ -234,7 +234,7 @@ h6, .h6 {
   align-items: center;
 }
 .services .content-services .box-services .img-services {
-  background-image: url(/img/bg1.jpg);
+  background-image: url(../img/bg1.jpg);
   background-size: cover;
   background-position: center;
   margin-bottom: 20px;
